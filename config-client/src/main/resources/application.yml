@@ -1,0 +1,16 @@
+spring:
+    application:
+        # so the config server can pull the config repository
+        name: config-client
+    profiles:
+        active: dev
+    config:
+        import: optional:configserver:http://localhost:8080
+    cloud:
+        config:
+            # can be stored in a repo, will be decrypted before sent
+            password: '{cipher}c325a68bf8413b249bd36c970c6706d543bb89484d6727e4ed43968b10c09fb9'
+
+# encryption key for (same as server), do not store this in a repo
+encrypt:
+    key: thisisanexamplekey

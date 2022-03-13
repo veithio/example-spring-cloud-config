@@ -1,0 +1,22 @@
+encrypt:
+  key: thisisanexamplekey
+
+spring:
+  security:
+    user:
+      password: '{cipher}c325a68bf8413b249bd36c970c6706d543bb89484d6727e4ed43968b10c09fb9'
+  cloud:
+    config:
+      server:
+        git:
+          # put your git url here
+          uri: git@github.com:example/{application}-config.git
+          ignoreLocalSshSettings: true
+          privateKey: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIG4wIBAAKCAYEAq7NThG4YVpR/NgJKXbwD2NKpKcF8WhgqIpeOq/2q+0H/H7eL
+            8qasdY2czmmaLzaKHiNauPozbXNxTH9dUlhvP1IXXIBxJdZ5XhfEKrAIZZWH+EVG
+            bdAAM9+vwGdtEYUHb7UR1s1B7PIGzFyR8iWeFyOwMYYyrjdNFbdXrlbP44KDvyOZ
+            hgE/IEVDoy4iEprP9GgKdkwx1/x0IkEYzHfPphpwFixxU9Ohez4uYLe9AuvJZWWR
+            h34ald4/IIEE..........
+            -----END RSA PRIVATE KEY-----
